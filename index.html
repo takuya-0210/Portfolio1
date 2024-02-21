@@ -4,9 +4,197 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>about.me</title>
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
     <script defer src="script.js"></script>
 </head>
 <body>
+  <header>
+    <a href=""><span id="headerTitle">about.me</span></a>
+  </header>
+  <main>
+
+    <div id="main-list">
+      <ul>
+        <li id="aboutbtn" class="aboutColor aLine">about</li>
+        <li class="learnedColor lLine">learned</li>
+        <li class="portfolioColor pLine">portfolio</li>
+        <li class="futureColor fLine">future</li>
+      </ul>
+    </div>
+
+    <article id="aboutArticle">
+      <h1>about</h1>
+      <div id="aboutLayout">
+        <ul id="about-listArea">
+          <li>
+            <div class="about-list">
+              <span></span>
+              <h2>name</h2>
+              <p>可香 拓也</p>
+            </div>
+          </li>
+          <li>
+            <ul id="about-listArea-list2">
+              <li>
+                <div class="about-list">
+                  <span></span>
+                  <h2>age</h2>
+                  <p>26歳</p>
+                </div>
+              </li>
+              <li>
+                <div class="about-list">
+                  <span></span>
+                  <h2>date of birth</h2>
+                  <p>1998.02.10</p>
+                </div>
+                
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul id="about-listArea-list3">
+              <li>
+                <div  class="about-list">
+                  <span></span>
+                  <h2>address</h2>
+                  <p>福岡県 福岡市 博多区 中呉服町 2-17 803</p>
+                </div>
+              </li>
+              <li>
+                <div class="about-list">
+                  <span></span>
+                  <h2>birth place</h2>
+                  <p>北海道</p>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul id="about-listArea-list4">
+              <li>
+                <div class="about-list">
+                  <span></span>
+                  <h2>job</h2>
+                  <p>
+                    飲食業<br>
+                    ( 料理 / 接客 )
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="about-list">
+                  <span></span>
+                  <h2>career</h2>
+                  <ul>
+                    <li>株式会社オールケッチャーノ</li>
+                    <li>株式会社フォンス</li>
+                    <li>株式会社Willing hands</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div class="about-list">
+              <h2>hobby</h2>
+              <ul>
+                <li>コーディング</li>
+                <li>絵を描く</li>
+                <li>筋トレ</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id="return">return</div>
+    </article>
+    <section id="about-section_restaurant">
+      <h3>飲食業</h3>
+      <p>( 料理 / 接客 )</p>
+      <div id="restaurantContent">
+        <div class="sectionBox">
+          <h4>料理</h4>
+          <p>
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <br>
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <br>
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <br>
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <br>
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <br>
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <br>
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <br>
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <br>
+          </p>
+        </div>
+        <div class="sectionBox">
+          <h4>接客</h4>
+          <p>
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <br>
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <br>
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <br>
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <br>
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <br>
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <br>
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <br>
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <br>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about-section_company">
+      <div id="companyContent">
+        <table>
+          <thead>
+            <tr>
+              <th>会社名</th>
+              <th>勤務年数</th>
+              <th>勤務職種</th>
+              <th>詳細</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>株式会社オールケッチャーノ</th>
+              <td>約2年</td>
+              <td>
+                <ul>
+                  <li>(正社員)</li>
+                  <li>接客業</li>
+                </ul>
+              </td>
+              <td>
+                <p>
+                  レストランでの接客・支給業務<br>
+                  東京のスカイツリーに併設してあるソラマチ31Fレストランにて、接客・料理の支給をメインに業務をしておりました。<br>
+                  社会人として初めての業務であったため、社会人としてのルールや振る舞い、高級レストランでの作法を勉強いたしました。
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <th>会社名</th>
+              <td>勤務年数</td>
+              <td>勤務職種</td>
+              <td>詳細</td>
+            </tr>
+            <tr>
+              <th>会社名</th>
+              <td>勤務年数</td>
+              <td>勤務職種</td>
+              <td>詳細</td>
+            </tr>
+          </tbody>
+        </table>
+        
+      </div>
+      
+    </section>
+  </main>
+  <footer></footer>
 </body>
 </html>

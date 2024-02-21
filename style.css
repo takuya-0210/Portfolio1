@@ -1,3 +1,435 @@
-p {
-    font-size: 100px;
+
+/*ブレイクポイント
+【横幅】
+大…980px～
+中…700px～
+小…360px～
+【縦幅】
+大…1440px～
+中…1100px～
+小…640px～
+*/
+
+
+
+/*基準を1rem=10pxに設定*/
+html {
+  font-size: 10px;
+  font-family: "Spectral", serif;
 }
+
+:root {
+  --sub-bgcolor: #c5c5c5;
+  --article-bgcolor: #333;
+  --about-color: #dd7878;
+  --learned-color:  #78bddd;
+  --portfolio-color: #78dd7d;
+  --future-color: #ddd778;
+}
+
+
+
+header {
+  height: 100px;
+  background-color: var(--sub-bgcolor);
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+header span {
+  font-size: 3.6rem;
+  margin-left: 20px;
+}
+
+#main-list {
+  position: relative;
+  background: linear-gradient(#000 1%, #333 30%, #333 60%, #000 99%);
+  height: calc(100vh - 150px);
+  
+}
+
+#main-list ul{
+  position: absolute;
+  top: calc(50% - 4.8rem);
+  width: 100%;
+  text-align: center;
+}
+
+#main-list ul li {
+  font-size: 4.8rem;
+  font-weight: 400;
+  color: #fff;
+  display: inline-block;
+  margin: 0 4.6%;
+}
+
+
+#main-list .aboutColor {
+  position: relative;
+  padding-bottom: 2px;
+}
+
+#main-list .aboutColor:hover {
+  color: var(--about-color);
+}
+
+.aboutColor.aLine::before {
+  content: "";
+  background-color: var(--about-color);
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: transform .3s;
+}
+
+.aboutColor.aLine:hover:before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+
+/*learned*/
+#main-list .learnedColor {
+  position: relative;
+  padding-bottom: 2px;
+}
+
+#main-list .learnedColor:hover {
+  color: var(--learned-color);
+}
+
+.learnedColor.lLine::before {
+  content: "";
+  background-color: var(--learned-color);
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: transform .3s;
+}
+
+.learnedColor.lLine:hover:before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+
+/*portfolio*/
+#main-list .portfolioColor {
+  position: relative;
+  padding-bottom: 2px;
+}
+
+#main-list .portfolioColor:hover {
+  color: var(--portfolio-color);
+}
+
+.portfolioColor.pLine::before {
+  content: "";
+  background-color: var(--portfolio-color);
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: transform .3s;
+}
+
+.portfolioColor.pLine:hover:before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+
+/*future*/
+#main-list .futureColor {
+  position: relative;
+  padding-bottom: 2px;
+}
+
+#main-list .futureColor:hover {
+  color: var(--future-color);
+}
+
+.futureColor.fLine::before {
+  content: "";
+  background-color: var(--future-color);
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: transform .3s;
+}
+
+.futureColor.fLine:hover:before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+/*main-listの非表示*/
+#main-list.hidden {
+  visibility: visible;
+}
+
+
+
+
+
+
+/*about-article*/
+#aboutArticle {
+  position: fixed;
+  z-index: -1;
+  opacity: 0;
+  top: 100px;
+  width: 100%;
+  height: calc(100vh - 150px);
+  background:var(--article-bgcolor);
+  transition: all 0.3s;
+  text-align: center;
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+#aboutArticle.panelactive {
+  opacity: 1;
+  z-index: 10;
+}
+
+#aboutArticle h1 {
+  height: 140px;
+  padding: 20px 0;
+  font-size: 6rem;
+  color: var(--about-color);
+  text-align: center;
+}
+
+#aboutArticle h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--about-color);
+}
+
+#aboutArticle h3 {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+#aboutLayout {
+  height: calc(100vh - (150px + 140px));
+}
+
+#about-listArea {
+  height: 100%;
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr 1fr;
+  padding: 0 20px 0 20px;
+}
+
+#about-listArea li {
+  margin: 0 12px;
+}
+
+#about-listArea li:nth-child(4){
+  cursor: pointer;
+}  
+
+
+
+#about-listArea li:nth-child(5){
+  cursor: pointer;
+}
+
+#about-listArea-list2 {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  height: 100%;
+}
+
+#about-listArea-list3 {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  height: 100%;
+}
+
+#about-listArea-list4 {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  height: 100%;
+}
+
+#about-listArea-list4 > li:last-child {
+  position: relative;
+  top: -20px;
+}
+
+.about-list {
+  position: relative;
+  top: 0;
+
+}
+.about-list h2, .about-list p , .about-list ul{
+  background-color: var(--article-bgcolor);
+  position: relative;
+  z-index: 2;
+}
+
+.about-list::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -6px;
+  z-index: 1;
+  width: calc(100% + 12px);
+  height: 100%;
+  display: inline-block;
+  border-right: solid 2px var(--about-color);
+  border-left: solid 2px var(--about-color);
+  border-top: solid 2px var(--about-color);
+  border-bottom: solid 2px var(--about-color);
+  border-radius: 5px;
+}
+
+
+/*about-section*/
+.sectionBox > p {
+  font-size: 2rem;
+}
+
+.blurBg {
+  filter: blur(10px);
+}
+
+/*section-restaurant*/
+#about-section_restaurant {
+  display: none;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+  text-align: center;
+  padding-top: 150px;
+  color: #fff;
+}
+
+#about-section_restaurant h3 {
+  font-size: 3rem;
+}
+
+#about-section_restaurant > p {
+  font-size: 1.6rem;
+}
+
+#restaurantContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 50px;
+}
+
+#about-section_restaurant h4 {
+  font-size: 2.5rem;
+}
+
+
+/*section-company*/
+#about-section_company {
+  display: none;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+  text-align: center;
+  padding-top: 150px;
+  color: #fff;
+}
+
+#companyContent {
+  display: grid;
+  grid
+}
+
+#about-section_company h3 {
+  font-size: 2.2rem;
+}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+  height: 50px;
+  background-color: var(--sub-bgcolor);
+}
+
+#return {
+  visibility: hidden;
+  text-align: center;
+  height: 30px;
+  font-size: 2rem;
+  color: #333;
+}
+
+
