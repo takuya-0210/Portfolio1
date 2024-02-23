@@ -72,6 +72,7 @@ header span {
 
 #main-list .aboutColor:hover {
   color: var(--about-color);
+  cursor: pointer;
 }
 
 .aboutColor.aLine::before {
@@ -102,6 +103,7 @@ header span {
 
 #main-list .learnedColor:hover {
   color: var(--learned-color);
+  cursor: pointer;
 }
 
 .learnedColor.lLine::before {
@@ -132,6 +134,7 @@ header span {
 
 #main-list .portfolioColor:hover {
   color: var(--portfolio-color);
+  cursor: pointer;
 }
 
 .portfolioColor.pLine::before {
@@ -162,6 +165,7 @@ header span {
 
 #main-list .futureColor:hover {
   color: var(--future-color);
+  cursor: pointer;
 }
 
 .futureColor.fLine::before {
@@ -201,7 +205,7 @@ header span {
   top: 100px;
   width: 100%;
   height: calc(100vh - 150px);
-  background:var(--article-bgcolor);
+  background: linear-gradient(#dd7878 -5%, #333 5%, #333 95%, #dd7878 105%);
   transition: all 0.3s;
   text-align: center;
   color: #fff;
@@ -362,28 +366,48 @@ header span {
   left: 0;
   z-index: 20;
   text-align: center;
-  padding-top: 150px;
+  padding-top: 10%;
   color: #fff;
 }
 
 #companyContent {
-  display: grid;
-  grid
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 1100px;
+  margin: 0 auto;
+  font-size: 1.4rem;
 }
 
 #about-section_company h3 {
   font-size: 2.2rem;
 }
 
- 
+#about-section_company table thead tr th {
+  padding: 10px 30px;
+}
 
+ #about-section_company table tbody {
+  height: 400px;
+ }
 
+ #about-section_company table td {
+  padding: 10px 30px;
+ }
 
+#about-section_company table tbody th {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #101010;
+}
 
+#about-section_company table tr {
+  border-bottom: solid 1px #ffffff59;
+}
 
-
-
-
+#about-section_company table tr:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
 
 
 
@@ -430,6 +454,7 @@ footer {
   height: 30px;
   font-size: 2rem;
   color: #333;
+  cursor: pointer;
 }
 
 
