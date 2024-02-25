@@ -226,6 +226,7 @@ header span {
 }
 
 #aboutArticle h2 {
+  overflow: hidden;
   text-align: center;
   font-size: 1.8rem;
   color: var(--about-color);
@@ -245,6 +246,23 @@ header span {
   display: grid;
   grid-template: 1fr 1fr / 1fr 1fr 1fr;
   padding: 0 20px 0 20px;
+}
+
+
+.popup {
+  position: relative;
+  animation: pop-anime 1s ease-out forwards;
+  animation-delay: 1s;
+  bottom: -25px;
+}
+
+@keyframes pop-anime {
+  from {
+    bottom: -25px;
+  }
+  to {
+    bottom: 0px;
+  }
 }
 
 #about-listArea li {
@@ -310,6 +328,37 @@ header span {
   border-bottom: solid 2px var(--about-color);
   border-radius: 5px;
 }
+
+
+/*text-anime*/
+.jumpText  {
+  display: inline-block;
+  animation: colorAnimation 1.5s ease-in infinite;
+}
+
+@keyframes colorAnimation {
+
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-5px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
 
 
 /*about-section*/
@@ -413,9 +462,29 @@ header span {
 
 
 
+/*section-hobby*/
+#about-section_hobby {
+  display: none;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+  text-align: center;
+  padding-top: 150px;
+  color: #fff;
+}
 
+#about-section_hobby h3 {
+  font-size: 5rem;
+}
 
-
+#about-section_hobby p {
+  font-size: 1.4rem;
+  margin-top: 15px;
+}
 
 
 
