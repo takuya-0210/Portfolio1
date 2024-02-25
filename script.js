@@ -6,12 +6,20 @@ const aboutContent = document.querySelector('#aboutArticle');
 const aboutbtn = document.getElementById('aboutbtn');
 const mainList = document.querySelector('#main-list'); 
 const return_content = document.querySelector('#return');
+const h2Anime = document.querySelectorAll('.about-list > h2 > span');
+console.log(h2Anime)
 
 aboutbtn.addEventListener('click', () => {
   aboutContent.classList.add('panelactive');
   mainList.style.visibility = 'hidden';
   return_content.style.visibility = 'visible';
+  
+  const h2Anime = document.querySelectorAll('.about-list > h2 > span');
+  for (let i = 0; i < h2Anime.length; i++ ) {
+    h2Anime[i].classList.add('popup');
+  }
 });
+
 
 return_content.addEventListener('click', () => {
   aboutContent.classList.remove('panelactive');
@@ -21,7 +29,15 @@ return_content.addEventListener('click', () => {
 
 
 
-//about-section-Reataurant
+
+
+
+
+
+
+
+
+//about-section-Restaurant
 const aboutList4_1 = document.querySelector('#about-listArea-list4 > li:first-child > .about-list');
 const sectionRestaurant = document.querySelector('#about-section_restaurant');
 
@@ -58,15 +74,28 @@ sectionCompany.addEventListener('click',() => {
 
 
 
+//about-section-hobby
+const aboutList5 = document.querySelector('#about-listArea-list5 > .about-list');
+const sectionHobby = document.querySelector('#about-section_hobby');
+
+aboutList5.addEventListener('click', () => {
+  sectionHobby.style.display = 'block';
+  aboutContent.classList.add('blurBg');
+  headerTitle.classList.add('blurBg');
+});
+
+sectionHobby.addEventListener('click',() => {
+  sectionHobby.style.display = 'none';
+  aboutContent.classList.remove('blurBg');
+  headerTitle.classList.remove('blurBg');
+});
 
 
 
 
 
 
-
-
-//about-section-company
+//about-section-company-tableScroll
 function mousedragscrollable (element) {
   let target;
   const elms = document.querySelectorAll(element);

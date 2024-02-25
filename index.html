@@ -34,7 +34,7 @@
           <li>
             <div class="about-list">
               <span></span>
-              <h2>name</h2>
+              <h2><span>name</span></h2>
               <p>可香 拓也</p>
             </div>
           </li>
@@ -43,14 +43,14 @@
               <li>
                 <div class="about-list">
                   <span></span>
-                  <h2>age</h2>
+                  <h2><span>age</span></h2>
                   <p>26歳</p>
                 </div>
               </li>
               <li>
                 <div class="about-list">
                   <span></span>
-                  <h2>date of birth</h2>
+                  <h2><span>date of birth</span></h2>
                   <p>1998.02.10</p>
                 </div>
                 
@@ -62,14 +62,14 @@
               <li>
                 <div  class="about-list">
                   <span></span>
-                  <h2>address</h2>
+                  <h2><span>address</span></h2>
                   <p>福岡県 福岡市 博多区 中呉服町 2-17 803</p>
                 </div>
               </li>
               <li>
                 <div class="about-list">
                   <span></span>
-                  <h2>birth place</h2>
+                  <h2><span>birth place</span></h2>
                   <p>北海道</p>
                 </div>
               </li>
@@ -80,7 +80,13 @@
               <li>
                 <div class="about-list">
                   <span></span>
-                  <h2>job</h2>
+                  <h2  class="text-anime">
+                    <span>
+                      <span class="jumpText">j</span>
+                      <span class="jumpText" style="animation-delay: 0.2s;">o</span>
+                      <span class="jumpText" style="animation-delay: 0.2s;">b</span>
+                    </span>
+                  </h2>
                   <p>
                     飲食業<br>
                     ( 料理 / 接客 )
@@ -90,7 +96,16 @@
               <li>
                 <div class="about-list">
                   <span></span>
-                  <h2>career</h2>
+                  <h2  class="text-anime">
+                    <span>
+                      <span class="jumpText">c</span>
+                      <span class="jumpText" style="animation-delay: 0.2s;">a</span>
+                      <span class="jumpText" style="animation-delay: 0.3s;">r</span>
+                      <span class="jumpText" style="animation-delay: 0.4s;">e</span>
+                      <span class="jumpText" style="animation-delay: 0.5s;">e</span>
+                      <span class="jumpText" style="animation-delay: 0.6s;">r</span>
+                    </span>
+                  </h2>
                   <ul>
                     <li>株式会社オールケッチャーノ</li>
                     <li>株式会社フォンス</li>
@@ -100,12 +115,17 @@
               </li>
             </ul>
           </li>
-          <li>
+          <li id="about-listArea-list5">
             <div class="about-list">
-              <h2>hobby</h2>
-              <ul>
+              <h2><span>hobby</span></h2>
+              <ul class="boundContainer">
                 <li>コーディング</li>
-                <li>絵を描く</li>
+                  <li>
+                    <span class="jumpText">絵</span>
+                    <span class="jumpText" style="animation-delay: 0.2s;">を</span>
+                    <span class="jumpText" style="animation-delay: 0.3s;">描</span>
+                    <span class="jumpText" style="animation-delay: 0.4s;">く</span>
+                  </li>
                 <li>筋トレ</li>
               </ul>
             </div>
@@ -114,6 +134,8 @@
       </div>
       <div id="return">return</div>
     </article>
+
+    <!--about-section_restaurant-->
     <section id="about-section_restaurant">
       <h3>飲食業</h3>
       <p>( 料理 / 接客 )</p>
@@ -147,6 +169,7 @@
       </div>
     </section>
 
+    <!--about-section_company-->
     <section id="about-section_company">
       <div id="companyContent">
         <table>
@@ -228,9 +251,17 @@
             </tr>
           </tbody>
         </table>
-        
       </div>
-      
+    </section>
+
+    <!--about-section_hobby_painting-->
+    <section id="about-section_hobby">
+      <h3>painting</h3>
+      <p>
+        元々は鉛筆のみで作画をしていましたが、今はデジタルイラストを作成しております。
+      </p>
+      <div id="hobby_paintingContent">
+      </div>
     </section>
   </main>
   <footer></footer>
