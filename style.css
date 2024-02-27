@@ -212,7 +212,6 @@ header span {
   font-size: 1.6rem;
 }
 
-
 #aboutArticle h1 {
   height: 140px;
   padding: 20px 0;
@@ -244,7 +243,6 @@ header span {
   padding: 0 20px 0 20px;
 }
 
-
 .popup {
   position: relative;
   animation: pop-anime 0.8s ease-out forwards;
@@ -268,8 +266,6 @@ header span {
 #about-listArea li:nth-child(4){
   cursor: pointer;
 }  
-
-
 
 #about-listArea li:nth-child(5){
   cursor: pointer;
@@ -303,6 +299,7 @@ header span {
   top: 0;
 
 }
+
 .about-list h2, .about-list p , .about-list ul{
   background-color: var(--article-bgcolor);
   position: relative;
@@ -350,11 +347,6 @@ header span {
     transform: translateY(0);
   }
 }
-
-
-
-
-
 
 
 /*about-section*/
@@ -455,9 +447,6 @@ header span {
 }
 
 
-
-
-
 /*section-hobby*/
 #about-section_hobby {
   display: none;
@@ -499,19 +488,9 @@ header span {
   color: #fff;
 }
 
-
-
 #learnedLayoutWrap {
   width: 100vw;
 }
-
-.learnedLayout-title{
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-}
-
-
 
 #learnedArticle h1 {
   height: 140px;
@@ -521,6 +500,11 @@ header span {
   text-align: center;
 }
 
+.learnedLayout-title{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
 
 .learnedLayout-title h2{
   overflow: hidden;
@@ -576,16 +560,51 @@ header span {
 
 
 
+/*portfolio-article*/
+#portfolioArticle {
+  position: fixed;
+  visibility: hidden;
+  top: 100px;
+  width: 100%;
+  height: calc(100vh - 150px);
+  background: linear-gradient(#78dd7d -5%, #333 5%, #333 95%, #78dd7d 105%);
+  transition: all 0.3s;
+  text-align: center;
+  color: #fff;
+}
 
+#portfolioLayoutWrap {
+  width: 100vw;
+}
 
+#portfolioArticle h1 {
+  height: 140px;
+  padding: 20px 0;
+  font-size: 6rem;
+  color: var(--portfolio-color);
+  text-align: center;
+}
 
+.portfolioLayout-title{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
 
+.portfolioLayout-title h2{
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  padding: 0 40px;
+  font-size: 3rem;
+  color: var(--sub-bgcolor);
+  cursor: pointer;
+  
+}
 
-
-
-
-
-
+.portfolioLayout-title h2 span {
+  filter: blur(0);
+}
 
 
 

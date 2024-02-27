@@ -30,7 +30,6 @@ learnedBtn.addEventListener('click', () => {
   learnedContent.style.visibility = 'visible';
   mainList.style.visibility = 'hidden';
   return_content.style.visibility = 'visible';
-  console.log(return_content)
   const h2Anime = document.querySelectorAll('.learnedLayout-title > h2 > span');
   for (let i = 0; i < h2Anime.length; i++ ) {
     h2Anime[i].classList.add('popup');
@@ -39,9 +38,32 @@ learnedBtn.addEventListener('click', () => {
 
 
 
+
+const portfolioContent = document.querySelector('#portfolioArticle');
+const portfolioBtn = document.getElementById('portfolioBtn');
+
+portfolioBtn.addEventListener('click', () => {
+  portfolioContent.style.visibility = 'visible';
+  mainList.style.visibility = 'hidden';
+  return_content.style.visibility = 'visible';
+  const h2Anime = document.querySelectorAll('.portfolioLayout-title > h2 > span');
+  for (let i = 0; i < h2Anime.length; i++ ) {
+    h2Anime[i].classList.add('popup');
+  }
+})
+
+
+
+
+
+
+
+
+
 return_content.addEventListener('click', () => {
   aboutContent.style.visibility = 'hidden';
   learnedContent.style.visibility = 'hidden';
+  portfolioContent.style.visibility = 'hidden';
   mainList.style.visibility = 'visible';
   return_content.style.visibility = 'hidden';
 });
@@ -161,7 +183,7 @@ function mousedragscrollable (element) {
 
 
 
-learnedDtailArea_active = function () {
+learnedDetailArea_active = function () {
   const btns = document.querySelectorAll('.learnedLayout-title > h2 > span');
   const targets = document.querySelectorAll('.learned-DetailArea > li');
   
@@ -171,7 +193,7 @@ learnedDtailArea_active = function () {
     }
   }
 
-  for (i = 0; i < btns.length; i++ ) {
+  for (let i = 0; i < btns.length; i++ ) {
     btns[i].addEventListener('click', function () {
       
       let btn = this.innerHTML;
@@ -206,9 +228,62 @@ learnedDtailArea_active = function () {
   }
 }
   
+portfolioArea_action = function () {
+
+  const btns = document.querySelectorAll('.portfolioLayout-title > h2 > span');
+  const btns2 = document.querySelectorAll('.portfolioLayout-title > h2 > span');
+  console.log(btns2);
+  
+  //const targets = document.querySelectorAll('')
+  
+  reset_style = function () {
+    for (let H of btns) {
+      H.style.filter = 'blur(3px)';
+    }
+  }
+  
+  
+  for (let i = 0; i < btns.length; i++) {
+    btns[i].addEventListener('click', function () {
+      let btn = this.innerHTML;
+      switch (btn) {
+        case 'About.Takuya':
+          reset_style();
+          this.style.filter = 'blur(0)';
+          break;
+        case 'Restaurant Site':
+          reset_style();
+          this.style.filter = 'blur(0)';
+          break;
+        case 'Record Site':
+          reset_style();
+          this.style.filter = 'blur(0)';
+          break;
+      }
+    });
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 window.addEventListener('load', function () {
-  learnedDtailArea_active();
+  learnedDetailArea_active();
   mousedragscrollable('#companyContent');
+  portfolioArea_action();
 })
 
 
