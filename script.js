@@ -5,12 +5,13 @@ const headerTitle = document.querySelector('#headerTitle');
 const aboutContent = document.querySelector('#aboutArticle');
 const aboutbtn = document.getElementById('aboutbtn');
 const mainList = document.querySelector('#main-list'); 
-const return_content = document.querySelector('#return');
+const return_content = document.querySelector('.return');
 const h2Anime = document.querySelectorAll('.about-list > h2 > span');
-console.log(h2Anime)
+
+
 
 aboutbtn.addEventListener('click', () => {
-  aboutContent.classList.add('panelactive');
+  aboutContent.style.visibility = 'visible';
   mainList.style.visibility = 'hidden';
   return_content.style.visibility = 'visible';
   
@@ -21,8 +22,26 @@ aboutbtn.addEventListener('click', () => {
 });
 
 
+
+const learnedContent = document.querySelector('#learnedArticle');
+const learnedBtn = document.getElementById('learnedBtn');
+
+learnedBtn.addEventListener('click', () => {
+  learnedContent.style.visibility = 'visible';
+  mainList.style.visibility = 'hidden';
+  return_content.style.visibility = 'visible';
+  console.log(return_content)
+  const h2Anime = document.querySelectorAll('.learnedLayout-title > h2 > span');
+  for (let i = 0; i < h2Anime.length; i++ ) {
+    h2Anime[i].classList.add('popup');
+  }
+})
+
+
+
 return_content.addEventListener('click', () => {
-  aboutContent.classList.remove('panelactive');
+  aboutContent.style.visibility = 'hidden';
+  learnedContent.style.visibility = 'hidden';
   mainList.style.visibility = 'visible';
   return_content.style.visibility = 'hidden';
 });
@@ -139,67 +158,109 @@ function mousedragscrollable (element) {
   });
 }
 
-window.addEventListener('DOMContentLoaded', function () {
+
+
+
+learnedDtailArea_active = function () {
+  const btns = document.querySelectorAll('.learnedLayout-title > h2 > span');
+  const targets = document.querySelectorAll('.learned-DetailArea > li');
+  
+  reset_style = function () {
+    for (let j of targets) {
+      j.style.opacity = '0';
+    }
+  }
+
+  for (i = 0; i < btns.length; i++ ) {
+    btns[i].addEventListener('click', function () {
+      
+      let btn = this.innerHTML;
+      const Html = targets[0];
+      const Css = targets[1];
+      const JavaScript = targets[2];
+      const illustraitor = targets[3];
+      const photoshop = targets[4];
+        switch (btn) {
+          case 'HTML':
+            reset_style();
+            Html.style.opacity = '1';
+            break;
+          case 'CSS':
+            reset_style();
+            Css.style.opacity = '1';
+            break;
+          case 'JavaScript':
+            reset_style();
+            JavaScript.style.opacity = '1';
+            break;
+          case 'illustraitor':
+            reset_style();
+            illustraitor.style.opacity = '1';
+            break;
+          case 'photoshop':
+            reset_style();
+            photoshop.style.opacity = '1';
+            break;
+        }
+    });
+  }
+}
+  
+window.addEventListener('load', function () {
+  learnedDtailArea_active();
   mousedragscrollable('#companyContent');
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-return_content.addEventListener('click', () => {
-  aboutcontent.classList.remove('panelactive');
-  mainList.style.visibility = 'visible';
-  return_content.style.visibility = 'hidden';
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

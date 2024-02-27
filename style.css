@@ -1,13 +1,14 @@
 
 /*ブレイクポイント
-【横幅】
-大…980px～
-中…700px～
-小…360px～
-【縦幅】
-大…1440px～
-中…1100px～
-小…640px～
+PC...2560px ×　1140px
+
+Tab...1024px ×　744px
+
+phone...375px × 667px
+PC/Tab 横幅最大…1440px たて最大…900px
+                
+PC/Tab 横幅最小…1024px 縦幅最小…744px
+phone　横幅最小…375px　縦幅最小…667px
 */
 
 
@@ -199,9 +200,8 @@ header span {
 
 /*about-article*/
 #aboutArticle {
+  visibility: hidden;
   position: fixed;
-  z-index: -1;
-  opacity: 0;
   top: 100px;
   width: 100%;
   height: calc(100vh - 150px);
@@ -212,10 +212,6 @@ header span {
   font-size: 1.6rem;
 }
 
-#aboutArticle.panelactive {
-  opacity: 1;
-  z-index: 10;
-}
 
 #aboutArticle h1 {
   height: 140px;
@@ -251,14 +247,14 @@ header span {
 
 .popup {
   position: relative;
-  animation: pop-anime 1s ease-out forwards;
-  animation-delay: 1s;
-  bottom: -25px;
+  animation: pop-anime 0.8s ease-out forwards;
+  animation-delay: 0.3s;
+  bottom: -40px;
 }
 
 @keyframes pop-anime {
   from {
-    bottom: -25px;
+    bottom: -40px;
   }
   to {
     bottom: 0px;
@@ -490,6 +486,149 @@ header span {
 
 
 
+/*learned-article*/
+#learnedArticle {
+  position: fixed;
+  visibility: hidden;
+  top: 100px;
+  width: 100%;
+  height: calc(100vh - 150px);
+  background: linear-gradient(#78bddd -5%, #333 5%, #333 95%, #78bddd 105%);
+  transition: all 0.3s;
+  text-align: center;
+  color: #fff;
+}
+
+
+
+#learnedLayoutWrap {
+  width: 100vw;
+}
+
+.learnedLayout-title{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+#learnedArticle h1 {
+  height: 140px;
+  padding: 20px 0;
+  font-size: 6rem;
+  color: var(--learned-color);
+  text-align: center;
+}
+
+
+.learnedLayout-title h2{
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  padding: 0 40px;
+  border-bottom: solid 2px #202020;
+  font-size: 3rem;
+  color: var(--sub-bgcolor);
+  cursor: pointer;
+}
+
+.learnedLayout-title h2:hover {
+  color: var(--learned-color);
+  animation: borderAnime-under .5s linear forwards;
+}
+
+@keyframes borderAnime-under {
+  from {border-bottom: solid 2px #202020;}
+  to {border-bottom: solid 2px #333;}
+}
+
+.learnedLayout-title h2:hover::before {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  border-bottom: solid 3px var(--learned-color);
+  animation: borderAnime .5s linear forwards;
+}
+
+@keyframes borderAnime {
+  from {width: 0%;}
+  to {width: 100%;}
+}
+
+.learned-DetailArea {
+  position: relative;
+  height:calc((100vh - (100px + 140px + 46px + 50px + 60px)));
+  width: 80%;
+  margin: 30px auto 30px auto; 
+}
+
+.learned-DetailArea li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -517,7 +656,7 @@ footer {
   background-color: var(--sub-bgcolor);
 }
 
-#return {
+.return {
   visibility: hidden;
   text-align: center;
   height: 30px;
