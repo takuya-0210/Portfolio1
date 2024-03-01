@@ -26,6 +26,9 @@ html {
   --learned-color:  #78bddd;
   --portfolio-color: #78dd7d;
   --future-color: #ddd778;
+  --html-color: #e4571f;
+  --css-color: #3e8bcb;
+  --Js-color: #dfc93a;
 }
 
 
@@ -599,13 +602,103 @@ header span {
   font-size: 3rem;
   color: var(--sub-bgcolor);
   cursor: pointer;
-  
 }
 
 .portfolioLayout-title h2 span {
   filter: blur(0);
 }
 
+.portfolio_detail {
+  opacity: 0;
+}
+
+.portfolio_detail.section1-active {
+  width: 90%;
+  height: 330px;
+  margin: 20px auto 0 auto;
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.portfolio_detail.section2-active {
+  width: 90%;
+  height: 330px;
+  margin: 20px auto 0 auto;
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.portfolio_detail.section3-active {
+  width: 90%;
+  height: 330px;
+  margin: 20px auto 0 auto;
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+
+
+.sectionArea-right {
+  width: 50%;
+  position: relative;
+  top: 15px;
+  left: 50%;
+}
+
+
+.circle {
+  opacity: 0;
+    position: absolute;
+	top: 50%;
+	left: 100px;
+	transform: translate(-50%, -50%);
+	width: 300px;
+  height: 300px;
+	
+	box-shadow: 0 0 6px #fff inset, 0 0 10px #000 ;
+  border-radius: 50%;
+}
+
+.circle.activeCircle1 {
+  background-image: radial-gradient(#1c1c1c 60%, transparent 62%), 
+  conic-gradient(#1bbe1d 0% 30%, transparent 31% 100%), 
+  conic-gradient(#206821 0% 70%, transparent 71% 100%), 
+  conic-gradient(#8eed90 0% 100%, transparent 100% 100%);
+  animation: zoomIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  animation-delay: 0.5s;
+}
+
+.circle.activeCircle2 {
+  background-image: radial-gradient(#1c1c1c 60%, transparent 62%), 
+  conic-gradient(#be1b1b 0% 30%, transparent 31% 100%), 
+  conic-gradient(#682020 0% 70%, transparent 71% 100%), 
+  conic-gradient(#ed8e8e 0% 100%, transparent 100% 100%);
+  animation: zoomIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  animation-delay: 0.5s;
+}
+
+.circle.activeCircle3 {
+  background-image: radial-gradient(#1c1c1c 60%, transparent 62%), 
+  conic-gradient(#1b49be 0% 30%, transparent 31% 100%), 
+  conic-gradient(#202b68 0% 70%, transparent 71% 100%), 
+  conic-gradient(#8e91ed 0% 100%, transparent 100% 100%);
+  animation: zoomIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  animation-delay: 0.5s;
+}
+ 
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
 
 
@@ -616,12 +709,59 @@ header span {
 
 
 
+.circle ul {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  font-size: 2rem;
+}
 
+.circle ul li {
+  width: 62px;
+}
 
+.circle ul li:first-child {
+  position: absolute;
+  top: 60px;
+  right: 60px;
+}
 
+.circle ul li:nth-child(2) {
+  position: absolute;
+  top: 200px;
+  right: 120px;
+}
 
+.circle ul li:nth-child(3) {
+  position: absolute;
+  top: 60px;
+  right: 180px;
+}
 
+.circle .percentage {
+  position: relative;
+  font-size: 1.6rem;
+}
 
+.circle .percentage span:first-child {
+  position: absolute;
+  top: 85px;
+  right: 40px;
+}
+
+.circle .percentage span:nth-child(2) {
+  position: absolute;
+  top: 225px;
+  right: 110px;
+}
+
+.circle .percentage span:nth-child(3) {
+  position: absolute;
+  top: 90px;
+  right: 170px;
+}
 
 
 
