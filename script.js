@@ -187,15 +187,16 @@ learnedDetailArea_active = function () {
   const btns = document.querySelectorAll('.learnedLayout-title > h2 > span');
   const targets = document.querySelectorAll('.learned-DetailArea > li');
   
-  reset_style = function () {
-    for (let j of targets) {
-      j.style.opacity = '0';
-    }
-  }
 
   for (let i = 0; i < btns.length; i++ ) {
     btns[i].addEventListener('click', function () {
       
+      reset_style = function () {
+        for (let j of targets) {
+          j.style.opacity = '0';
+        }
+      }
+
       let btn = this.innerHTML;
       const Html = targets[0];
       const Css = targets[1];
@@ -206,6 +207,7 @@ learnedDetailArea_active = function () {
           case 'HTML':
             reset_style();
             Html.style.opacity = '1';
+            console.log(targets)
             break;
           case 'CSS':
             reset_style();
@@ -231,42 +233,75 @@ learnedDetailArea_active = function () {
 portfolioArea_action = function () {
 
   const btns = document.querySelectorAll('.portfolioLayout-title > h2 > span');
-  const btns2 = document.querySelectorAll('.portfolioLayout-title > h2 > span');
-  console.log(btns2);
+  const circles = document.querySelectorAll('.circle');
+  const targetSections = document.querySelectorAll('.portfolio_detail');
+  const addClass = ['section1-active', 'section2-active', 'section3-active'] ;
+  const addCircle = ['activeCircle1', 'activeCircle2', 'activeCircle3']
+
+
   
-  //const targets = document.querySelectorAll('')
-  
-  reset_style = function () {
-    for (let H of btns) {
-      H.style.filter = 'blur(3px)';
-    }
-  }
   
   
   for (let i = 0; i < btns.length; i++) {
     btns[i].addEventListener('click', function () {
-      let btn = this.innerHTML;
+
+    reset_style = function () {
+      for (let H of btns) {
+        H.style.filter = 'blur(3px)';
+      }
+      for (let K of targetSections) {
+        if (K.classList.contains(addClass[0])) {
+          K.classList.remove(addClass[0]);
+        } else if (K.classList.contains(addClass[1])) {
+          K.classList.remove(addClass[1]);
+        } else if (K.classList.contains(addClass[2])) {
+          K.classList.remove(addClass[2]);
+        }
+      }
+      for (let L of circles) {
+        if (L.classList.contains(addCircle[0])) {
+          L.classList.remove(addCircle[0]);
+        } else if (L.classList.contains(addCircle[1])) {
+          L.classList.remove(addCircle[1]);
+        } else if (L.classList.contains(addCircle[2])) {
+          L.classList.remove(addCircle[2]);
+        }
+      }
+    }
+  
+
+  let btn = this.innerHTML;
       switch (btn) {
         case 'About.Takuya':
           reset_style();
           this.style.filter = 'blur(0)';
+          targetSections[0].classList.add(addClass[0]);
+          circles[0].classList.add(addCircle[0]);
           break;
         case 'Restaurant Site':
           reset_style();
           this.style.filter = 'blur(0)';
+          targetSections[1].classList.add(addClass[1]);
+          circles[1].classList.add(addCircle[1]);
           break;
         case 'Record Site':
           reset_style();
           this.style.filter = 'blur(0)';
+          targetSections[2].classList.add(addClass[2]);
+          circles[2].classList.add(addCircle[2]);
           break;
       }
     });
   }
+  
+ 
+  
+  
+  
+  
+
 
 }
-
-
-
 
 
 
