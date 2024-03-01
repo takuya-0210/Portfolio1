@@ -54,6 +54,21 @@ portfolioBtn.addEventListener('click', () => {
 
 
 
+const futureContent = document.querySelector('#futureArticle');
+const futureBtn = document.getElementById('futureBtn');
+
+
+futureBtn.addEventListener('click', () => {
+  futureContent.style.visibility = 'visible';
+  mainList.style.visibility = 'hidden';
+  return_content.style.visibility = 'visible';
+
+})
+
+
+
+
+
 
 
 
@@ -64,6 +79,7 @@ return_content.addEventListener('click', () => {
   aboutContent.style.visibility = 'hidden';
   learnedContent.style.visibility = 'hidden';
   portfolioContent.style.visibility = 'hidden';
+  futureContent.style.visibility = 'hidden';
   mainList.style.visibility = 'visible';
   return_content.style.visibility = 'hidden';
 });

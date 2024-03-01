@@ -578,6 +578,7 @@ header span {
 
 #portfolioLayoutWrap {
   width: 100vw;
+  height: calc(100vh - (100px + 140px + 100px + 50px));
 }
 
 #portfolioArticle h1 {
@@ -614,7 +615,7 @@ header span {
 
 .portfolio_detail.section1-active {
   width: 90%;
-  height: 330px;
+  height: 100%;
   margin: 20px auto 0 auto;
   background-color: #1c1c1c;
   border-radius: 10px;
@@ -623,7 +624,7 @@ header span {
 
 .portfolio_detail.section2-active {
   width: 90%;
-  height: 330px;
+  height: 100%;
   margin: 20px auto 0 auto;
   background-color: #1c1c1c;
   border-radius: 10px;
@@ -632,32 +633,37 @@ header span {
 
 .portfolio_detail.section3-active {
   width: 90%;
-  height: 330px;
+  height: 100%;
   margin: 20px auto 0 auto;
   background-color: #1c1c1c;
   border-radius: 10px;
   opacity: 1;
 }
 
-
+.sectionArea-left {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  left: 0;
+}
 
 .sectionArea-right {
   width: 50%;
+  height: 100%;
   position: relative;
-  top: 15px;
+  bottom: calc(100vh - (100px + 140px + 100px + 50px));
   left: 50%;
 }
 
 
 .circle {
   opacity: 0;
-    position: absolute;
+  position: absolute;
 	top: 50%;
 	left: 100px;
 	transform: translate(-50%, -50%);
 	width: 300px;
   height: 300px;
-	
 	box-shadow: 0 0 6px #fff inset, 0 0 10px #000 ;
   border-radius: 50%;
 }
@@ -691,21 +697,14 @@ header span {
  
 @keyframes zoomIn {
   0% {
-    transform: scale(0.8);
+    transform: translateY(-50%) scale(0.8);
     opacity: 0;
   }
   100% {
     opacity: 1;
-    transform: scale(1);
+    transform: translateY(-50%) scale(1);
   }
 }
-
-
-
-
-
-
-
 
 
 
@@ -766,10 +765,71 @@ header span {
 
 
 
+/*future-article*/
+#futureArticle {
+  position: fixed;
+  visibility: hidden;
+  top: 100px;
+  width: 100%;
+  height: calc(100vh - 150px);
+  background: linear-gradient(var(--future-color) -5%, #333 5%, #333 95%, var(--future-color) 105%);
+  transition: all 0.3s;
+  text-align: center;
+  color: #fff;
+}
+
+#futureArticle h1 {
+  height: 140px;
+  padding: 20px 0;
+  font-size: 6rem;
+  color: var(--future-color);
+  text-align: center;
+}
+
+#futureLayoutWrap {
+  position: relative;
+  width: 90vw;
+  height: calc(100vh - (100px + 140px + 50px + 30px));
+  display: block;
+  margin: 0 auto;
+}
 
 
 
+.futureContent {
+  background-color: #1010108d;
+  border-radius: 20px;
+}
 
+#futureLayoutWrap #frontContent ,
+#futureLayoutWrap #backContent {
+  transition: all 0.6s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+#futureLayoutWrap #frontContent {
+  transform: rotateY(-180deg);
+}
+
+#futureLayoutWrap:hover #backContent {
+  transform: rotateY(180deg);
+}
+
+#futureLayoutWrap:hover #frontContent {
+  transform: rotateY(0);
+}
+
+.futureContent h2{
+  text-align: center;
+  padding: 0 40px;
+  font-size: 2rem;
+  color: var(--sub-bgcolor);
+}
 
 
 
