@@ -25,6 +25,9 @@ aboutbtn.addEventListener('click', () => {
 
 const learnedContent = document.querySelector('#learnedArticle');
 const learnedBtn = document.getElementById('learnedBtn');
+const learnedDisplayContents = document.querySelectorAll('.learned-DetailArea_displayFlex');
+
+
 
 learnedBtn.addEventListener('click', () => {
   learnedContent.style.visibility = 'visible';
@@ -34,7 +37,17 @@ learnedBtn.addEventListener('click', () => {
   for (let i = 0; i < h2Anime.length; i++ ) {
     h2Anime[i].classList.add('popup');
   }
-})
+});
+
+resetContent = function () {
+  for (let i = 0; i < learnedDisplayContents.length; i++) {
+    if (learnedDisplayContents[i].style.visibility = 'visible') {
+      for (let j of learnedDisplayContents) {
+        j.style.visibility = 'hidden';
+      }
+    }
+  }
+}
 
 
 
@@ -78,6 +91,7 @@ futureBtn.addEventListener('click', () => {
 return_content.addEventListener('click', () => {
   aboutContent.style.visibility = 'hidden';
   learnedContent.style.visibility = 'hidden';
+  resetContent();
   portfolioContent.style.visibility = 'hidden';
   futureContent.style.visibility = 'hidden';
   mainList.style.visibility = 'visible';
@@ -201,15 +215,18 @@ function mousedragscrollable (element) {
 
 learnedDetailArea_active = function () {
   const btns = document.querySelectorAll('.learnedLayout-title > h2 > span');
-  const targets = document.querySelectorAll('.learned-DetailArea > li');
-  
+  const targets = document.querySelectorAll('.learned-DetailArea_displayFlex');
+  const learnedContent = document.querySelector('.learned-DetailArea');
 
   for (let i = 0; i < btns.length; i++ ) {
     btns[i].addEventListener('click', function () {
-      
+
       reset_style = function () {
         for (let j of targets) {
-          j.style.opacity = '0';
+          j.style.visibility = 'hidden';
+        }
+        for (let H of btns) {
+          H.style.color = '#c5c5c5';
         }
       }
 
@@ -222,24 +239,28 @@ learnedDetailArea_active = function () {
         switch (btn) {
           case 'HTML':
             reset_style();
-            Html.style.opacity = '1';
-            console.log(targets)
+            Html.style.visibility = 'visible';
+            btns[0].style.color = '#78bddd';
             break;
           case 'CSS':
             reset_style();
-            Css.style.opacity = '1';
+            Css.style.visibility = 'visible';
+            btns[1].style.color = '#78bddd';
             break;
           case 'JavaScript':
             reset_style();
-            JavaScript.style.opacity = '1';
+            JavaScript.style.visibility = 'visible';
+            btns[2].style.color = '#78bddd';
             break;
-          case 'illustraitor':
+          case 'Illustrator':
             reset_style();
-            illustraitor.style.opacity = '1';
+            illustraitor.style.visibility = 'visible';
+            btns[3].style.color = '#78bddd';
             break;
           case 'photoshop':
             reset_style();
-            photoshop.style.opacity = '1';
+            photoshop.style.visibility = 'visible';
+            btns[4].style.color = '#78bddd';
             break;
         }
     });

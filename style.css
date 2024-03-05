@@ -546,17 +546,81 @@ header span {
 
 .learned-DetailArea {
   position: relative;
-  height:calc((100vh - (100px + 140px + 46px + 50px + 60px)));
-  width: 80%;
-  margin: 30px auto 30px auto; 
+  
+  
+  
+  
+  
 }
 
-.learned-DetailArea li {
+.learned-DetailArea_displayFlex {
   position: absolute;
   top: 0;
-  left: 0;
-  opacity: 0;
+  left: 5vw;
+  height:calc((100vh - (100px + 140px + 46px + 50px + 60px)));
+  width: 90vw;
+  margin: 30px auto 30px auto; 
+  display: inline-block;
+  font-size: 1.4rem;
+  overflow: hidden;
+  overflow-y: scroll;
+  visibility: hidden;
+
 }
+
+.learned-DetailArea_content {
+  position: relative;
+  left: 5%;
+  width: 90%;
+  height: 100%;
+  background-color: #101010b5;
+  padding-top: 50px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+}
+
+.learned-DetailArea_content:nth-child(2){
+  height: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.learned-DetailArea_content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.learned-DetailArea_content h4 {
+  font-size: 1.6rem;
+}
+
+.learned-DetailArea_content ol {
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  display: inline-block;
+}
+
+.learned-DetailArea_miniContent {
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.learned-DetailArea_miniContent::after {
+  content: "";
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  width: 15px;
+  height: 10px;
+  background-color: #ffffffc7;
+}
+
+.learned-DetailArea_miniContent:last-child::after {
+ display: none;
+}
+
 
 
 
