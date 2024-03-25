@@ -12,7 +12,6 @@ phone　横幅最小…375px　縦幅最小…667px
 */
 
 
-
 /*基準を1rem=10pxに設定*/
 html {
   font-size: 10px;
@@ -643,6 +642,7 @@ header span {
 #portfolioLayoutWrap {
   width: 100vw;
   height: calc(100vh - (100px + 140px + 100px + 50px));
+  position: relative;
 }
 
 #portfolioArticle h1 {
@@ -675,6 +675,9 @@ header span {
 
 .portfolio_detail {
   opacity: 0;
+  position: absolute;
+  top: 30px;
+  left: 65px;
 }
 
 .portfolio_detail.section1-active {
@@ -709,6 +712,9 @@ header span {
   height: 100%;
   position: relative;
   left: 0;
+  padding-top: 15px;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .sectionArea-right {
@@ -718,6 +724,30 @@ header span {
   bottom: calc(100vh - (100px + 140px + 100px + 50px));
   left: 50%;
 }
+
+/*left-setting*/
+
+
+
+.sectionArea-left h3 {
+  margin-top: 30px;
+  font-size: 1.8rem;
+  color: var(--portfolio-color);
+}
+
+.sectionArea-left p, .sectionArea-left li {
+  margin-top: 10px;
+  font-size: 1.4rem;
+  border-bottom: 1px solid #4e4e4e;
+}
+
+
+
+
+
+
+
+
 
 
 .circle {

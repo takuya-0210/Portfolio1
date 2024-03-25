@@ -309,7 +309,7 @@ portfolioArea_action = function () {
 
   let btn = this.innerHTML;
       switch (btn) {
-        case 'About.Takuya':
+        case 'about.me':
           reset_style();
           this.style.filter = 'blur(0)';
           targetSections[0].classList.add(addClass[0]);
