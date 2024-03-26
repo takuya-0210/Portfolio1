@@ -321,7 +321,7 @@ portfolioArea_action = function () {
           targetSections[1].classList.add(addClass[1]);
           circles[1].classList.add(addCircle[1]);
           break;
-        case 'Record Site':
+        case 'CodeHint':
           reset_style();
           this.style.filter = 'blur(0)';
           targetSections[2].classList.add(addClass[2]);

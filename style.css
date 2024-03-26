@@ -728,9 +728,11 @@ header span {
 /*left-setting*/
 
 
+.sectionArea-left .explainArea {
+  margin-top: 30px;
+}
 
 .sectionArea-left h3 {
-  margin-top: 30px;
   font-size: 1.8rem;
   color: var(--portfolio-color);
 }
@@ -738,7 +740,7 @@ header span {
 .sectionArea-left p, .sectionArea-left li {
   margin-top: 10px;
   font-size: 1.4rem;
-  border-bottom: 1px solid #4e4e4e;
+  border-bottom: 1px solid #4e4e4e57;
 }
 
 
@@ -764,8 +766,8 @@ header span {
 
 .circle.activeCircle1 {
   background-image: radial-gradient(#1c1c1c 60%, transparent 62%), 
-  conic-gradient(#1bbe1d 0% 30%, transparent 31% 100%), 
-  conic-gradient(#206821 0% 70%, transparent 71% 100%), 
+  conic-gradient(#1bbe1d 0% 47.9%, transparent 31% 100%), 
+  conic-gradient(#206821 0% 82%, transparent 71% 100%), 
   conic-gradient(#8eed90 0% 100%, transparent 100% 100%);
   animation: zoomIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
   animation-delay: 0.5s;
@@ -782,9 +784,9 @@ header span {
 
 .circle.activeCircle3 {
   background-image: radial-gradient(#1c1c1c 60%, transparent 62%), 
-  conic-gradient(#1b49be 0% 30%, transparent 31% 100%), 
-  conic-gradient(#202b68 0% 70%, transparent 71% 100%), 
-  conic-gradient(#8e91ed 0% 100%, transparent 100% 100%);
+  conic-gradient(#1bbe1d 0% 56%, transparent 31% 100%), 
+  conic-gradient(#206821 0% 87.2%, transparent 71% 100%), 
+  conic-gradient(#8eed90 0% 100%, transparent 100% 100%);
   animation: zoomIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
   animation-delay: 0.5s;
 }
@@ -823,8 +825,8 @@ header span {
 
 .circle ul li:nth-child(2) {
   position: absolute;
-  top: 200px;
-  right: 120px;
+  top: 175px;
+  right: 160px;
 }
 
 .circle ul li:nth-child(3) {
@@ -846,8 +848,8 @@ header span {
 
 .circle .percentage span:nth-child(2) {
   position: absolute;
-  top: 225px;
-  right: 110px;
+  top: 200px;
+  right: 160px;
 }
 
 .circle .percentage span:nth-child(3) {
@@ -921,10 +923,35 @@ header span {
 .futureContent h2{
   text-align: center;
   padding: 0 40px;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--sub-bgcolor);
 }
 
+.futureContent h3 {
+  font-size: 2rem;
+  color: var(--future-color);
+}
+
+.futureContent .contentWrap {
+  margin-top: 30px;
+}
+
+.futureContent ul  {
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+}
+
+.futureContent ul li {
+  width: 200px;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.futureContent ul li h4 {
+  
+}
 
 
 
